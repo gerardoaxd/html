@@ -1,2 +1,299 @@
 # html
 cómo hacer un sitio web en HTML desde cero 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Leer HTML en un Bloc de Notas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        b {
+            color: #0056b3;
+        }
+        .code-example {
+            background-color: #e2e2e2;
+            padding: 10px;
+            border-left: 5px solid #0056b3;
+            margin-bottom: 10px;
+            font-family: monospace;
+            white-space: pre-wrap; /* Para que el texto se ajuste si es muy largo */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Puntos Clave para Entender un Sitio HTML en un Bloc de Notas</h1>
+        <p>Cuando abres un archivo HTML en un bloc de notas, estás viendo el "esqueleto" de una página web. Aquí te decimos qué buscar para entender su estructura y contenido.</p>
+
+        ---
+
+        <h2>1. La Estructura Fundamental: El Esqueleto</h2>
+        <p>Siempre busca estas etiquetas iniciales, definen el tipo y el alcance del documento:</p>
+        <ul>
+            <li><b><code>&lt;!DOCTYPE html&gt;</code></b>: Declara que es un documento HTML5. Siempre al principio.</li>
+            <li><b><code>&lt;html&gt;</code></b>: La etiqueta raíz que contiene todo el contenido de la página.</li>
+            <li><b><code>&lt;head&gt;</code></b>: Contiene información meta sobre la página (no visible directamente).</li>
+            <li><b><code>&lt;body&gt;</code></b>: Aquí está todo el contenido visible de la página (texto, imágenes, etc.).</li>
+        </ul>
+        <div class="code-example">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Título de la Pestaña&lt;/title&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Contenido visible aquí --&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+
+        ---
+
+        <h2>2. Contenido de Texto: Títulos y Párrafos</h2>
+        <p>El texto se organiza con estas etiquetas:</p>
+        <ul>
+            <li><b><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></b>: Encabezados de diferentes niveles de importancia (<code>h1</code> es el más importante).</li>
+            <li><b><code>&lt;p&gt;</code></b>: Para párrafos de texto normal.</li>
+        </ul>
+        <div class="code-example">
+            &lt;h1&gt;Mi Título Principal&lt;/h1&gt;<br>
+            &lt;p&gt;Este es un párrafo de texto en mi página.&lt;/p&gt;
+        </div>
+
+        ---
+
+        <h2>3. Interacción: Enlaces e Imágenes</h2>
+        <p>Así se conectan las páginas y se muestran los elementos visuales:</p>
+        <ul>
+            <li><b><code>&lt;a href="url_destino"&gt;Texto del enlace&lt;/a&gt;</code></b>: Un enlace (hipervínculo). <code>href</code> indica a dónde va.</li>
+            <li><b><code>&lt;img src="ruta_imagen.jpg" alt="Descripción"&gt;</code></b>: Inserta una imagen. <code>src</code> es la fuente y <code>alt</code> es el texto alternativo.</li>
+        </ul>
+        <div class="code-example">
+            &lt;a href="https://www.ejemplo.com"&gt;Visita Ejemplo.com&lt;/a&gt;<br>
+            &lt;img src="mi_imagen.jpg" alt="Una bonita imagen"&gt;
+        </div>
+
+        ---
+
+        <h2>4. Organización: Listas y Tablas</h2>
+        <p>Para estructurar datos de forma ordenada:</p>
+        <ul>
+            <li><b>Listas no ordenadas (viñetas)</b>: <code>&lt;ul&gt;</code> para la lista, <code>&lt;li&gt;</code> para cada elemento.</li>
+            <li><b>Listas ordenadas (numeradas)</b>: <code>&lt;ol&gt;</code> para la lista, <code>&lt;li&gt;</code> para cada elemento.</li>
+            <li><b>Tablas</b>: <code>&lt;table&gt;</code> (tabla), <code>&lt;tr&gt;</code> (fila), <code>&lt;th&gt;</code> (encabezado de celda), <code>&lt;td&gt;</code> (celda de datos).</li>
+        </ul>
+        <div class="code-example">
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Elemento 1&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Elemento 2&lt;/li&gt;<br>
+            &lt;/ul&gt;<br><br>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Encabezado&lt;/th&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Dato&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </div>
+
+        ---
+
+        <h2>5. Estilos y Funcionalidad: CSS y JavaScript</h2>
+        <p>Aunque no veas el código completo, verás los "lazos" a estos archivos:</p>
+        <ul>
+            <li><b>CSS (Estilos)</b>: Se enlaza en el <code>&lt;head&gt;</code> con <code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code>. Le da la apariencia.</li>
+            <li><b>JavaScript (Interactividad)</b>: Se enlaza con <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>. Añade dinamismo y funcionalidades.</li>
+        </ul>
+        <div class="code-example">
+            &lt;!-- En el head --&gt;<br>
+            &lt;link rel="stylesheet" href="styles.css"&gt;<br><br>
+            &lt;!-- Antes de cerrar el body --&gt;<br>
+            &lt;script src="main.js"&gt;&lt;/script&gt;
+        </div>
+
+        ---
+
+        <h2>6. Comentarios: Notas para el Desarrollador</h2>
+        <p>Esto no es visible en la página, solo para los que leen el código:</p>
+        <ul>
+            <li><b><code>&lt;!-- Este es un comentario --&gt;</code></b>: Texto ignorado por el navegador.</li>
+        </ul>
+        <div class="code-example">
+            &lt;!-- Esto es un comentario útil para entender el código --&gt;
+        </div>
+
+        <p>Al entender estos puntos clave, puedes empezar a "leer" cualquier sitio web HTML directamente desde un simple bloc de notas, ¡y desentrañar cómo está construido!</p>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Leer HTML en un Bloc de Notas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        b {
+            color: #0056b3;
+        }
+        .code-example {
+            background-color: #e2e2e2;
+            padding: 10px;
+            border-left: 5px solid #0056b3;
+            margin-bottom: 10px;
+            font-family: monospace;
+            white-space: pre-wrap; /* Para que el texto se ajuste si es muy largo */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Puntos Clave para Entender un Sitio HTML en un Bloc de Notas</h1>
+        <p>Cuando abres un archivo HTML en un bloc de notas, estás viendo el "esqueleto" de una página web. Aquí te decimos qué buscar para entender su estructura y contenido.</p>
+
+        ---
+
+        <h2>1. La Estructura Fundamental: El Esqueleto</h2>
+        <p>Siempre busca estas etiquetas iniciales, definen el tipo y el alcance del documento:</p>
+        <ul>
+            <li><b><code>&lt;!DOCTYPE html&gt;</code></b>: Declara que es un documento HTML5. Siempre al principio.</li>
+            <li><b><code>&lt;html&gt;</code></b>: La etiqueta raíz que contiene todo el contenido de la página.</li>
+            <li><b><code>&lt;head&gt;</code></b>: Contiene información meta sobre la página (no visible directamente).</li>
+            <li><b><code>&lt;body&gt;</code></b>: Aquí está todo el contenido visible de la página (texto, imágenes, etc.).</li>
+        </ul>
+        <div class="code-example">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Título de la Pestaña&lt;/title&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Contenido visible aquí --&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+
+        ---
+
+        <h2>2. Contenido de Texto: Títulos y Párrafos</h2>
+        <p>El texto se organiza con estas etiquetas:</p>
+        <ul>
+            <li><b><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></b>: Encabezados de diferentes niveles de importancia (<code>h1</code> es el más importante).</li>
+            <li><b><code>&lt;p&gt;</code></b>: Para párrafos de texto normal.</li>
+        </ul>
+        <div class="code-example">
+            &lt;h1&gt;Mi Título Principal&lt;/h1&gt;<br>
+            &lt;p&gt;Este es un párrafo de texto en mi página.&lt;/p&gt;
+        </div>
+
+        ---
+
+        <h2>3. Interacción: Enlaces e Imágenes</h2>
+        <p>Así se conectan las páginas y se muestran los elementos visuales:</p>
+        <ul>
+            <li><b><code>&lt;a href="url_destino"&gt;Texto del enlace&lt;/a&gt;</code></b>: Un enlace (hipervínculo). <code>href</code> indica a dónde va.</li>
+            <li><b><code>&lt;img src="ruta_imagen.jpg" alt="Descripción"&gt;</code></b>: Inserta una imagen. <code>src</code> es la fuente y <code>alt</code> es el texto alternativo.</li>
+        </ul>
+        <div class="code-example">
+            &lt;a href="https://www.ejemplo.com"&gt;Visita Ejemplo.com&lt;/a&gt;<br>
+            &lt;img src="mi_imagen.jpg" alt="Una bonita imagen"&gt;
+        </div>
+
+        ---
+
+        <h2>4. Organización: Listas y Tablas</h2>
+        <p>Para estructurar datos de forma ordenada:</p>
+        <ul>
+            <li><b>Listas no ordenadas (viñetas)</b>: <code>&lt;ul&gt;</code> para la lista, <code>&lt;li&gt;</code> para cada elemento.</li>
+            <li><b>Listas ordenadas (numeradas)</b>: <code>&lt;ol&gt;</code> para la lista, <code>&lt;li&gt;</code> para cada elemento.</li>
+            <li><b>Tablas</b>: <code>&lt;table&gt;</code> (tabla), <code>&lt;tr&gt;</code> (fila), <code>&lt;th&gt;</code> (encabezado de celda), <code>&lt;td&gt;</code> (celda de datos).</li>
+        </ul>
+        <div class="code-example">
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Elemento 1&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Elemento 2&lt;/li&gt;<br>
+            &lt;/ul&gt;<br><br>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Encabezado&lt;/th&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Dato&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </div>
+
+        ---
+
+        <h2>5. Estilos y Funcionalidad: CSS y JavaScript</h2>
+        <p>Aunque no veas el código completo, verás los "lazos" a estos archivos:</p>
+        <ul>
+            <li><b>CSS (Estilos)</b>: Se enlaza en el <code>&lt;head&gt;</code> con <code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code>. Le da la apariencia.</li>
+            <li><b>JavaScript (Interactividad)</b>: Se enlaza con <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>. Añade dinamismo y funcionalidades.</li>
+        </ul>
+        <div class="code-example">
+            &lt;!-- En el head --&gt;<br>
+            &lt;link rel="stylesheet" href="styles.css"&gt;<br><br>
+            &lt;!-- Antes de cerrar el body --&gt;<br>
+            &lt;script src="main.js"&gt;&lt;/script&gt;
+        </div>
+
+        ---
+
+        <h2>6. Comentarios: Notas para el Desarrollador</h2>
+        <p>Esto no es visible en la página, solo para los que leen el código:</p>
+        <ul>
+            <li><b><code>&lt;!-- Este es un comentario --&gt;</code></b>: Texto ignorado por el navegador.</li>
+        </ul>
+        <div class="code-example">
+            &lt;!-- Esto es un comentario útil para entender el código --&gt;
+        </div>
+
+        <p>Al entender estos puntos clave, puedes empezar a "leer" cualquier sitio web HTML directamente desde un simple bloc de notas, ¡y desentrañar cómo está construido!</p>
+    </div>
+</body>
+</html>
